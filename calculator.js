@@ -28,9 +28,12 @@ function calculatorModule () {
    * @return { Number }    current total
    */
   function _load (number) {
-
-    total = number;
-    return total;
+    if (typeof number === 'number') {
+      total = number;
+      return total;
+    }else {
+      return 'not a number';
+    }
   }
 
   /**
@@ -47,7 +50,11 @@ function calculatorModule () {
    * @param { Number } x
    */
   function _add (number) {
-    total = number + total;
+    if (typeof number === 'number') {
+      total = number + total;
+    }else {
+      return 'not a number';
+    }
   }
 
   /**
@@ -55,7 +62,11 @@ function calculatorModule () {
    * @param  { Number } x
    */
   function _subtract (number) {
-    total = total - number;
+    if (typeof number === 'number') {
+      total = total - number;
+    }else {
+      return 'not a number';
+    }
   }
 
   /**
@@ -63,7 +74,11 @@ function calculatorModule () {
    * @param  { Number } x
    */
   function _multiply (number) {
-    total = total * number;
+    if (typeof number === 'number') {
+      total = total * number;
+    }else {
+      return 'not a number';
+    }
   }
 
 
@@ -72,7 +87,11 @@ function calculatorModule () {
    * @param  { Number } x
    */
   function _divide (number) {
-    total = total / number;
+    if (typeof number === 'number') {
+      total = total / number;
+    }else {
+      return 'not a number';
+    }
   }
 
 
